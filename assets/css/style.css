@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    overflow-x: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.75px solid #c2c2c2;
+    margin-bottom: 10px;
+    height: 64px;
+}
+header .logo {
+    width: 250px;
+    margin-left: 10px;
+}
+header .menu {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+nav .close {
+    width: 30px;
+    height: 30px;
+}
+.menu {
+    display: none;
+}
+.close {
+    display: none;
+}
+ul {
+    display: flex;
+}
+li img {
+    width: 30px;
+    margin-right: 10px;
+}
+li a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-weight: bold;
+    border-bottom: 4px solid transparent;
+}
+li a:hover {
+    color: #367c2b;
+    background-color: #ffde00;
+    border-bottom: 4px solid #367c2b;
+}
+li.active a {
+    border-bottom: 4px solid #367c2b;
+}
+.pedidoPadrao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #c2c2c2;
+    width: 930px;
+    border-radius: 10px;
+}
+.pedidoPadrao h1 {
+    margin: 15px;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+}
+.infoPadrao {
+    display: flex;
+    gap: 30px;
+}
+.produtoPadrao, .detalhesPadrao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.produtoPadrao img {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+}
+footer {
+    border-top: 1.75px solid #c2c2c2;
+    background-color: #e2e2e2;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+footer span, footer a {
+    margin: 0 15px;
+    color: #666;
+}
+footer span {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.country-link {
+    margin: auto;
+    color: #333;
+    border: 2px solid #c2c2c2;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.country-link img {
+    margin-right: 5px;
+    height: 12px;
+    border: 1px solid #000;
+}
+
+@media(max-width: 995px) {
+    .pedidoPadrao {
+        width: 500px;
+    }
+    .infoPadrao {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 962px) {
+    nav {
+        display: none;
+        position: absolute;
+        background-color: #ffde00;
+        width: 70vw;
+        height: 100vh;
+        top: 0px;
+        right: 0;
+    }
+    .menu {
+        display: block;
+    }
+    .close {
+        display: block;
+        margin: 10px;
+    }
+    ul {
+        flex-direction: column;
+    }
+    li a {
+        border-bottom: 0;
+        border-left: 4px solid transparent;
+    }
+    li.active a {
+        border-bottom: 0;
+        border-left: 4px solid #367c2b;
+    }
+    li a:hover {
+        background-color: #aa9300;
+        border-bottom: 0;
+        border-left: 4px solid #367c2b;
+    }
+}
+
+@media(max-width: 566px) {
+    .pedidoPadrao {
+        width: 275px;
+    }
+    .pedidoPadrao h1 {
+        font-size: 28px;
+    }
+    .detalhesPadrao, .produtoPadrao {
+        width: 250px;
+    }
+    .produtoPadrao img {
+        width: 225px;
+        height: 225px;
+    }
+}
+
+@media(max-width: 375px) {
+    footer span {
+        font-size: 10px;
+    }
+}
