@@ -81,7 +81,7 @@ li.active a {
     display: flex;
     gap: 30px;
 }
-.produtoPadrao, .detalhesPadrao {
+.produtoPadrao, .kitInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,6 +94,80 @@ li.active a {
     width: 400px;
     height: 400px;
     background-color: #fff;
+}
+.kitInfo--sizearea, .kitInfo--desc {
+    margin-bottom: 20px;
+}
+.kitInfo--sizes {
+    display:inline-flex;
+    border-radius:10px;
+    overflow:hidden;
+}
+.kitInfo--size {
+    padding: 10px 15px;
+    color: #000;
+    background-color: #eee;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease .5s;
+}
+.kitInfo--size:hover {
+    background-color: #ccc;
+}
+.kitInfo--size.selected {
+    background-color: #367c2b;
+    color: #ffde00;
+}
+.kitInfo--size.selected span {
+    color: #d6d6d6;
+}
+.kitInfo--size span {
+    font-size:12px;
+    color: #999;
+    font-weight: normal;
+}
+.kitInfo-qt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kitInfo--qtarea {
+    display: inline-flex;
+    justify-content: center;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 30px;
+}
+.kitInfo--qtarea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 10px;
+    color: #333;
+}
+.kitInfo--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: #000;
+}
+.pedido {
+    border: 2.5px solid #ffde00;
+    border-radius: 10px;
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffde00;
+    background-color: #367c2b;
+}
+.pedido:hover {
+    background-color: #2b6322;
+    cursor: pointer;
 }
 footer {
     border-top: 1.75px solid #c2c2c2;
@@ -180,7 +254,7 @@ footer span {
     .pedidoPadrao h1 {
         font-size: 28px;
     }
-    .detalhesPadrao, .produtoPadrao {
+    .kitInfo, .produtoPadrao {
         width: 250px;
     }
     .produtoPadrao img {
