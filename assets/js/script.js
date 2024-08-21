@@ -17,19 +17,14 @@ close.addEventListener("click", () => {
     menu.style.display = 'block'
 })
 
-q('.kitInfo--qtmais.p').addEventListener('click', () => {
-    modalQt++
-    q('.kitInfo--qt.p').innerHTML = modalQt
+let openCart = q(".menuOpenner")
+openCart.addEventListener("click", () => {
+    let aside = q('aside')
+    aside.style.display = 'block'
 })
-q('.kitInfo--qtmenos.p').addEventListener('click', () => {
-    if(modalQt > 1){
-        modalQt--
-        q('.kitInfo--qt.p').innerHTML = modalQt
-    }
-})
-qa('.kitInfo--size.p').forEach((size, sizeIndex) => {
-    size.addEventListener('click', () => {
-        q('.kitInfo--size.p.selected').classList.remove('selected')
-        size.classList.add('selected')
-    })
+
+let closeCart = q(".closeCart")
+closeCart.addEventListener("click", () => {
+    let aside = q('aside')
+    aside.style.display = 'none'
 })

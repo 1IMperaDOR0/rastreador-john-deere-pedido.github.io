@@ -23,19 +23,12 @@ header .logo {
     width: 250px;
     margin-left: 10px;
 }
-header .menu {
+header .menu, nav .close, .menuClose img  {
     width: 30px;
     height: 30px;
     margin: 10px;
 }
-nav .close {
-    width: 30px;
-    height: 30px;
-}
-.menu {
-    display: none;
-}
-.close {
+.menu, .close {
     display: none;
 }
 ul {
@@ -60,7 +53,44 @@ li a:hover {
 li.active a {
     border-bottom: 4px solid #367c2b;
 }
-.pedidoPadrao {
+main {
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 65px;
+    background-color: #367c2b;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.menuOpenner {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 30px;
+    background-color: #ffde00;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.menuOpenner span {
+    margin-left: 10px;
+}
+.menuOpenner img {
+    width: 30px;
+    height: 30px;
+}
+aside {
+    display: none;
+    background-color: #ffde00;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+.cart {
+    margin-left: 20px;
+}
+.pedido {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,97 +98,54 @@ li.active a {
     margin-top: 20px;
     padding: 25px;
     background-color: #c2c2c2;
-    width: 930px;
+    width: 700px;
     border-radius: 10px;
 }
-.pedidoPadrao h1 {
+.pedido h1 {
     margin: 15px;
     margin-top: 0;
     text-align: center;
     font-size: 40px;
 }
-.infoPadrao {
+.kit {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-.produtoPadrao, .kitInfo {
+.kit p {
+    font-size: 20px;
+    margin: 20px;
+}
+.produto {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 400px;
+    width: 600px;
     background-color: #fff;
     border-radius: 10px;
 }
-.produtoPadrao img {
-    width: 400px;
-    height: 400px;
+.produto img {
+    width: 600px;
+    height: 600px;
     background-color: #fff;
 }
-.kitInfo--sizearea, .kitInfo--desc {
-    margin-bottom: 20px;
-}
-.kitInfo--sizes {
-    display:inline-flex;
-    border-radius:10px;
-    overflow:hidden;
-}
-.kitInfo--size {
-    padding: 10px 15px;
-    color: #000;
-    background-color: #ddd;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all ease .5s;
-}
-.kitInfo--size:hover {
-    background-color: #ccc;
-}
-.kitInfo--size.selected {
+.kitAdd {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    border-radius: 50%;
     background-color: #367c2b;
+    text-align: center;
     color: #ffde00;
-}
-.kitInfo--size.selected span {
-    color: #d6d6d6;
-}
-.kitInfo--size span {
-    font-size:12px;
-    color: #888;
-    font-weight: normal;
-}
-.kitInfo-qt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.kitInfo--qtarea {
-    display: inline-flex;
-    justify-content: center;
-    background-color: #ddd;
-    border-radius: 10px;
-    height: 30px;
-}
-.kitInfo--qtarea button {
-    border: 0;
-    background-color: transparent;
-    font-size: 17px;
-    outline: 0;
-    cursor: pointer;
-    padding: 0px 10px;
-    color: #333;
-}
-.kitInfo--qt {
-    line-height: 30px;
-    font-size: 12px;
+    font-size: 30px;
     font-weight: bold;
-    padding: 0px 30px;
-    color: #000;
+    cursor: pointer;
+    margin-top: -25px;
 }
-.kitInfo--qt.p {
-    padding: 0px 5px;
-} 
-.pedido {
+.selecionar {
+    display: none;
     border: 2.5px solid #ffde00;
     border-radius: 10px;
     margin-top: 25px;
@@ -168,7 +155,7 @@ li.active a {
     color: #ffde00;
     background-color: #367c2b;
 }
-.pedido:hover {
+.selecionar:hover {
     background-color: #2b6322;
     cursor: pointer;
 }
@@ -207,23 +194,34 @@ footer span {
 }
 
 @media(max-width: 995px) {
-    .pedidoPadrao {
+    .pedido {
         width: 500px;
     }
-    .infoPadrao {
+    .produto {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 400px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .produto img {
+        width: 400px;
+        height: 400px;
+        background-color: #fff;
     }
 }
 
 @media(max-width: 962px) {
     nav {
         display: none;
-        position: absolute;
+        position: fixed;
         background-color: #ffde00;
         width: 70vw;
-        height: 100vh;
-        top: 0px;
+        top: 0;
         right: 0;
+        bottom: 0;
     }
     .menu {
         display: block;
@@ -251,16 +249,16 @@ footer span {
 }
 
 @media(max-width: 566px) {
-    .pedidoPadrao {
+    .pedido {
         width: 275px;
     }
-    .pedidoPadrao h1 {
+    .pedido h1 {
         font-size: 28px;
     }
-    .kitInfo, .produtoPadrao {
+    .produto {
         width: 250px;
     }
-    .produtoPadrao img {
+    .produto img {
         width: 225px;
         height: 225px;
     }
