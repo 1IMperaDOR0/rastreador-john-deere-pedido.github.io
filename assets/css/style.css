@@ -374,26 +374,6 @@ footer span {
     border: 1px solid #000;
 }
 
-@media(max-width: 995px) {
-    .pedido {
-        width: 500px;
-    }
-    .produto {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        width: 400px;
-        background-color: #fff;
-        border-radius: 10px;
-    }
-    .produto img {
-        width: 400px;
-        height: 400px;
-        background-color: #fff;
-    }
-}
-
 @media(max-width: 962px) {
     nav {
         display: none;
@@ -426,6 +406,21 @@ footer span {
         background-color: #aa9300;
         border-bottom: 0;
         border-left: 4px solid #367c2b;
+    }
+
+    .pedido {
+        width: 500px;
+    }
+    .produto {
+        padding: 20px;
+        width: 400px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .produto img {
+        width: 400px;
+        height: 400px;
+        background-color: #fff;
     }
 }
 
