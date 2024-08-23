@@ -154,10 +154,10 @@ aside {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 35px;
     padding: 25px;
     background-color: #ffde00;
-    width: 700px;
+    width: 560px;
     border-radius: 10px;
 }
 .pedido h1 {
@@ -176,18 +176,22 @@ aside {
     font-size: 20px;
     margin: 20px;
 }
+.kit-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 .produto {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 600px;
+    width: 400px;
     background-color: #fff;
     border-radius: 10px;
 }
 .produto img {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     background-color: #fff;
 }
 .kitAdd {
@@ -374,6 +378,12 @@ footer span {
     border: 1px solid #000;
 }
 
+@media(max-width: 1115px) {
+    .kit-area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media(max-width: 962px) {
     nav {
         display: none;
@@ -410,17 +420,6 @@ footer span {
 
     .pedido {
         width: 500px;
-    }
-    .produto {
-        padding: 20px;
-        width: 400px;
-        background-color: #fff;
-        border-radius: 10px;
-    }
-    .produto img {
-        width: 400px;
-        height: 400px;
-        background-color: #fff;
     }
 }
 
