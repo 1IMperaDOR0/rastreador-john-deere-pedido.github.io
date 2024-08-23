@@ -22,82 +22,80 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="menuCart">
         <div class="menuOpenner"><img class="openCart" src="assets/images/icon-cart.png"/><span>0</span></div>
     </main>
+    <main>
+        <div class="kit-area"></div>
+    </main>
     <aside>
-        <div class="cartArea">
-            <div class="menuClose"><img class="closeCart" src="assets/images/icon-close.png"/></div>
-            <div class="cart">
-                <h1>Seus Kits</h1>
-            </div>
+        <div class="cart--area">
+            <div class="menu--closer"><img class="closeCart" src="assets/images/icon-close.png"/></div>
+                <div class="cart--areakit">
+                    <h1>Seus Kits</h1>
+                    <div class="cart"></div>
+                    <div class="cart--details">
+                        <div class="cart--finalizar">Finalizar o pedido!</div>
+                    </div>
+                </div>
         </div>
     </aside>
-    <section class="pedidos">
-        <div class="pedido">
-            <h1>Pedido 1</h1>
-            <div class="kit">
-                <div class=produto>
-                    <h1>Kit 1</h1>
-                    <img src="assets/images/pedido.jpg"/>
+    <div class="models">
+        <section class="pedidos">
+            <div class="pedido">
+                <h1 class="kitTitle">--</h1>
+                <div class="kit">
+                    <div class=produto>
+                        <h1 class="kitName">--</h1>
+                        <div class="kitImg"><img src=""/></div>
+                    </div>
+                    <a class="kitAdd">+</a>
+                    <p class="kitDescription">--</p>
                 </div>
-                <div class="kitAdd">+</div>
-                <p>Descrição do kit em questão detalhando os materias necessários para sua produção.</p>
+            </div>
+        </section>
+        <div class="cart--item">
+            <img src=""/>
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
             </div>
         </div>
-    </section>
-    <section class="pedidos">
-        <div class="pedido">
-            <h1>Pedido 2</h1>
-            <div class="kit">
-                <div class=produto>
-                    <h1>Kit 2</h1>
-                    <img src="assets/images/pedido.jpg"/>
+    </div>
+    <div class="kitWindowArea">
+        <div class="kitWindowBody">
+            <div class="kitInfo--cancelMobileButton">Voltar</div>
+            <div class="kitBig">
+                <img src=""/>
+            </div>
+            <div class="kitInfo">
+                <h1>--</h1>
+                <div class="kitInfo--desc">--</div>
+                <div class="kitInfo--sizearea">
+                    <div class="kitInfo--sector">Tamanho</div>
+                    <div class="kitInfo--sizes">
+                        <div data-key="0" class="kitInfo--size">PEQUENO <span>--</span></div>
+                        <div data-key="1" class="kitInfo--size">MÉDIO <span>--</span></div>
+                        <div data-key="2" class="kitInfo--size selected">GRANDE <span>--</span></div>
+                    </div>
                 </div>
-                <div class="kitAdd">+</div>
-                <p>Descrição do kit em questão detalhando os materias necessários para sua produção.</p>
+                <div>
+                    <div class="kitInfo--quantidade">
+                        <div class="kitInfo--sector">Quantidade</div>
+                        <div class="kitInfo--qtarea">
+                            <button class="kitInfo--qtmenos">-</button>
+                            <div class="kitInfo--qt">1</div>
+                            <button class="kitInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="kitInfo--addButton">Adicionar ao carrinho</div>
+                <div class="kitInfo--cancelButton">Cancelar</div>
             </div>
         </div>
-    </section>
-    <section class="pedidos">
-        <div class="pedido">
-            <h1>Pedido 3</h1>
-            <div class="kit">
-                <div class=produto>
-                    <h1>Kit 3</h1>
-                    <img src="assets/images/pedido.jpg"/>
-                </div>
-                <div class="kitAdd">+</div>
-                <p>Descrição do kit em questão detalhando os materias necessários para sua produção.</p>
-            </div>
-        </div>
-    </section>
-    <section class="pedidos">
-        <div class="pedido">
-            <h1>Pedido 4</h1>
-            <div class="kit">
-                <div class=produto>
-                    <h1>Kit 4</h1>
-                    <img src="assets/images/pedido.jpg"/>
-                </div>
-                <div class="kitAdd">+</div>
-                <p>Descrição do kit em questão detalhando os materias necessários para sua produção.</p>
-            </div>
-        </div>
-    </section>
-    <section class="pedidos">
-        <div class="pedido">
-            <h1>Pedido 5</h1>
-            <div class="kit">
-                <div class=produto>
-                    <h1>Kit 5</h1>
-                    <img src="assets/images/pedido.jpg"/>
-                </div>
-                <div class="kitAdd">+</div>
-                <p>Descrição do kit em questão detalhando os materias necessários para sua produção.</p>
-            </div>
-        </div>
-    </section>
+    </div>
     <footer>
         <a class="country-link" href="https://www.deere.com.br/pt/seletor-global-de-pa%C3%ADs/"><img src="assets/images/brasil.png"> Brasil</a>
         <span>
@@ -108,6 +106,7 @@
         </span>
         <span>Copyright © 2024 Deere & Company. Todos os direitos reservados</span>
     </footer>
+    <script src="assets/js/kits.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

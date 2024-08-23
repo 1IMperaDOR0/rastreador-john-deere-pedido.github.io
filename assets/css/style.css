@@ -23,7 +23,7 @@ header .logo {
     width: 250px;
     margin-left: 10px;
 }
-header .menu, nav .close, .menuClose img  {
+header .menu, nav .close, .menu--closer img  {
     width: 30px;
     height: 30px;
     margin: 10px;
@@ -53,7 +53,7 @@ li a:hover {
 li.active a {
     border-bottom: 4px solid #367c2b;
 }
-main {
+.menuCart {
     left: 0;
     top: 0;
     right: 0;
@@ -87,8 +87,67 @@ aside {
     top: 0;
     bottom: 0;
 }
-.cart {
-    margin-left: 20px;
+.cart--areakit {
+    margin-left: 40px;
+    font-size: 20px;
+}
+.cart--areakit h1 {
+    font-size: 40px;
+}
+.cart--item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 0;
+    margin: 25px 0;
+    margin-right: 40px;
+    border-top: 2px solid #367c2b;
+    border-bottom: 2px solid #367c2b;
+}
+.cart--item img {
+    max-width: 100px;
+    max-height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+}
+.cart--item--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+.cart--item--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+.cart--item--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+.cart--finalizar {
+    margin-top: 10px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #367c2b;
+    color: #ffde00;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.cart--finalizar:hover {
+    background-color: #2b6322;
+}
+.models {
+    display: none;
 }
 .pedido {
     display: flex;
@@ -97,7 +156,7 @@ aside {
     margin: auto;
     margin-top: 20px;
     padding: 25px;
-    background-color: #c2c2c2;
+    background-color: #ffde00;
     width: 700px;
     border-radius: 10px;
 }
@@ -127,8 +186,8 @@ aside {
     border-radius: 10px;
 }
 .produto img {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     background-color: #fff;
 }
 .kitAdd {
@@ -144,20 +203,141 @@ aside {
     cursor: pointer;
     margin-top: -37.5px;
 }
-.selecionar {
-    display: none;
-    border: 2.5px solid #ffde00;
-    border-radius: 10px;
-    margin-top: 25px;
-    padding: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffde00;
-    background-color: #367c2b;
-}
-.selecionar:hover {
+.kitAdd:hover {
     background-color: #2b6322;
+}
+.kitWindowArea {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+.kitWindowBody {
+    width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #999;
+    display: flex;
+    margin: 20px 0px;
+}
+.kitBig {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kitBig--back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+}
+.kitBig img {
+    height: 400px;
+    width: auto;
+}
+.kitInfo {
+    flex: 1;
+    padding-bottom: 50px;
+}
+.kitInfo h1 {
+    margin-top: 50px;
+}
+.kitInfo .kitInfo--desc {
+    font-size: 15px;
+    color: #999;
+    margin-top: 10px;
+}
+.kitInfo--sector {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.kitInfo--sizes {
+    display: inline-flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.kitInfo--size {
+    padding: 10px 15px;
+    color: #000;
+    background-color: #eee;
+    font-size: 13px;
+    font-weight: bold;
     cursor: pointer;
+    transition: all ease .5s;
+}
+.kitInfo--size:hover {
+    background-color: #ccc;
+}
+.kitInfo--size.selected {
+    background-color: #367c2b;
+    color: #ffde00;
+}
+.kitInfo--size.selected span {
+    color: #d6d6d6;
+}
+.kitInfo--size span {
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+}
+.kitInfo--qtarea {
+    display: inline-flex;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 30px;
+}
+.kitInfo--qtarea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 10px;
+    color: #333;
+}
+.kitInfo--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: #000;
+}
+.kitInfo--addButton {
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #367c2b;
+    color: #ffde00;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.kitInfo--addButton:hover {
+    background-color: #2b6322;
+}
+.kitInfo--cancelButton {
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px 0px;
+}
+.kitInfo--cancelMobileButton {
+    display: none;
+    height: 40px;
+    text-align:center;
+    line-height: 40px;
+    margin-bottom:30px;
 }
 footer {
     border-top: 1.75px solid #c2c2c2;
@@ -248,6 +428,61 @@ footer span {
     }
 }
 
+@media (max-width:840px) {
+    .kitWindowArea {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .kitWindowBody {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .kitBig img {
+        width: 75vw;
+        height: auto;
+    }
+
+    .kitInfo {
+        max-width: 546px;
+    }
+    .kitInfo h1 {
+        margin-top: 20px;
+    }
+
+    .kitInfo--qtarea {
+        height: 60px;
+    }
+    .kitInfo--qtarea button {
+        font-size: 25px;
+        padding: 0px 25px;
+    }
+    .kitInfo--qt {
+        line-height: 60px;
+        font-size: 20px;
+    }
+    .kitInfo--addButton {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    .kitInfo--cancelButton {
+        display: none;
+    }
+    .kitInfo--cancelMobileButton {
+        display: block;
+    }
+}
+
 @media(max-width: 566px) {
     .pedido {
         width: 275px;
@@ -265,6 +500,12 @@ footer span {
 }
 
 @media(max-width: 375px) {
+    .cart--item img {
+        max-width: 60px;
+        max-height: 60px;
+        min-width: 60px;
+        min-height: 60px;
+    }
     footer span {
         font-size: 10px;
     }
