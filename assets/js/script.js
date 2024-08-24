@@ -35,7 +35,7 @@ kitJson.map((item, index) => {
 
         q('.kitInfo--qt').innerHTML = modalQt
         q('.kitBig img').src = kitJson[key].img
-        q('.kitInfo h1').innerHTML = kitJson[key].title
+        q('.kitInfo h1').innerHTML = kitJson[key].name
         q('.kitInfo--desc').innerHTML = kitJson[key].description
         q('.kitInfo--size.selected').classList.remove('selected')
         qa('.kitInfo--size').forEach((size, sizeIndex) => {
@@ -130,7 +130,7 @@ function updateCart() {
     if(cart.length > 0){
 
         q('.cart').innerHTML = ''
-        
+
         q('.menuOpenner').addEventListener('click', () => {
             if(cart.length > 0){
                 let aside = q('aside')
